@@ -9,8 +9,11 @@ const app = express();
 // set a port - listen changes on the port
 const port = 4000;
 
+// allow Cross Origin
+app.use(cors());
+
 // import routes
-const workoutRoutes = require('./routes/workouts')
+const workoutRoutes = require('./routes/workouts');
 
 // use json with express
 app.use(express.json());
